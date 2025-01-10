@@ -20,5 +20,16 @@ namespace ToDoAppWPF
         {
             InitializeComponent();
         }
+
+        private void Button_Click_LäggTill(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_TaBort(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

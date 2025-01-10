@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDoAppWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="To-Do App" Height="350" Width="628">
     <Grid>
+        <Grid Margin=" 0,0,0,-6" Background="Beige"></Grid>
+        <TextBox Name="TaskListBox" HorizontalAlignment="Left" Margin="37,82,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="482" Height="205"/>
+        <Button Name="RemoveButton" Content="Ta bort uppgift" HorizontalAlignment="Left" Margin="524,267,0,0" VerticalAlignment="Top" Click="Button_Click_TaBort"/>
+        <TextBox Name="TaskTextBox" HorizontalAlignment="Left" Margin="37,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="482" Height="40"/>
+        <Button Name="AddButton" Content="Lägg till uppgift" HorizontalAlignment="Left" Margin="524,20,0,0" VerticalAlignment="Top" Click="Button_Click_LäggTill"/>
 
     </Grid>
 </Window>
