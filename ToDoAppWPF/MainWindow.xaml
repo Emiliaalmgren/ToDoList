@@ -5,13 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDoAppWPF"
         mc:Ignorable="d"
-        Title="To-Do App" Height="350" Width="628">
+        Title="To-Do App" Height="400" Width="628">
+
     <Grid>
-        <Grid Margin=" 0,0,0,-6" Background="Beige"></Grid>
-        <TextBox Name="TaskListBox" HorizontalAlignment="Left" Margin="37,82,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="482" Height="205"/>
-        <Button Name="RemoveButton" Content="Ta bort uppgift" HorizontalAlignment="Left" Margin="524,267,0,0" VerticalAlignment="Top" Click="Button_Click_TaBort"/>
-        <TextBox Name="TaskTextBox" HorizontalAlignment="Left" Margin="37,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="482" Height="40"/>
-        <Button Name="AddButton" Content="Lägg till uppgift" HorizontalAlignment="Left" Margin="524,20,0,0" VerticalAlignment="Top" Click="Button_Click_LäggTill"/>
+        <Grid Margin=" 0,0,0,-6" Background="Bisque"></Grid>
+        <Border BorderBrush="#FF0020FF" BorderThickness="3" Margin="0,0,0,-6"></Border>
+
+        <TextBox Name="TaskTextBox" HorizontalAlignment="Center" Margin="0,25,0,0" TextWrapping="Wrap" Text="Write a task here..." VerticalAlignment="Top" Width="557" Height="42" BorderThickness="1,1,3,3" GotFocus="TaskTextBox_GotFocus">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Offset="1" Color="#FF6E5CE6"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Button Name="AddButton" Content="Lägg till uppgift" Background="MintCream" Foreground="Green" HorizontalAlignment="Center" Margin="0,82,0,0" VerticalAlignment="Top" Click="Button_Click_LäggTill" RenderTransformOrigin="-0.259,2.407" Height="30" Width="106" FontFamily="Arial" BorderThickness="2,2,3,3" FontWeight="Bold" BorderBrush="Green"/>
+
+        <Button Name="RemoveButton" Content="Ta bort uppgift" Background="MintCream" Foreground="Crimson" HorizontalAlignment="Center" Margin="0,326,0,0" VerticalAlignment="Top" Click="Button_Click_TaBort" RenderTransformOrigin="-5.639,2.267" Height="34" Width="106" BorderThickness="2,2,3,3" BorderBrush="#FFE31919" FontFamily="Arial" FontWeight="Bold"/>
+        <ListBox Name="TaskListBox" HorizontalAlignment="Center" Height="178" VerticalAlignment="Top" Width="556" d:ItemsSource="{d:SampleData ItemCount=7}" Margin="0,117,0,0" BorderThickness="1,1,3,3" Cursor="Arrow" AutomationProperties.IsColumnHeader="True">
+            <ListBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Offset="1" Color="#FF6E5CE6"/>
+                </LinearGradientBrush>
+            </ListBox.BorderBrush>
+        </ListBox>
 
     </Grid>
 </Window>

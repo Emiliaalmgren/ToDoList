@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ToDoAppWPF
 {
     //summary
-    //Hanterar logiken för att lägga till, ta bort och 
+    //Hanterar logiken för att lägga till, ta bort och visa todo-items.
     //</summery>
     public class ToDoList
     {
